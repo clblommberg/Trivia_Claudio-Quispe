@@ -1,6 +1,5 @@
 import time  # Importamos la librería time para los espacios de tiempo
-import random # Importamos la librería para los puntajes aleatorios
-
+import random  # Importamos la librería para los puntajes aleatorios
 
 iniciar_trivia = True  # Iniciamos la variable en True
 # variables que almacenarán el número de veces que el usuario intenta nuestra trivia.
@@ -22,16 +21,21 @@ while iniciar_trivia == True:  # Mientras iniciar_trivia sea True, repite:
     print("Jugando...")
     time.sleep(1)
     nombre = input("Ingresa tu nombre: ")
-    for numero_carga in range(5, 0, -1):# cuenta regresiva de 5 segundos
-      print(numero_carga)
-      time.sleep(1)
-    print("\n Hola", nombre, "responde las siguientes preguntas escribiendo la letra de la alternativa y presionando 'Enter' para enviar tu respuesta:\n")
+    for numero_carga in range(5, 0, -1):  # cuenta regresiva de 5 segundos
+        print(numero_carga)
+        time.sleep(1)
+    print(
+        "\n Hola", nombre,
+        "responde las siguientes preguntas escribiendo la letra de la alternativa y presionando 'Enter' para enviar tu respuesta:\n"
+    )
 
     # Pregunta 1
     print("1) ¿Quién creó Python?")
     # lista de la pregunta uno
-    preg_uno = ["a) Guido van Rossum", "b) Larry Wall",
-                "c) Yukihiro Matsumoto", "d) Rasmus Lerdoff", "e) Sun Microsystems"]
+    preg_uno = [
+        "a) Guido van Rossum", "b) Larry Wall", "c) Yukihiro Matsumoto",
+        "d) Rasmus Lerdoff", "e) Sun Microsystems"
+    ]
     # ciclo for recorre e imprime la lista uno
     for i in range(0, 5):
         print(preg_uno[i])
@@ -52,9 +56,9 @@ while iniciar_trivia == True:  # Mientras iniciar_trivia sea True, repite:
     time.sleep(1)
 
     # Pregunta 2
-    print("\n1) ¿Cual de estos lenguajes de programación es de más bajo nivel?")
-    preg_dos = ["a) Python", "b) Java",
-                "c) PHP", "d) Assembly"]
+    print(
+        "\n2) ¿Cual de estos lenguajes de programación es de más bajo nivel?")
+    preg_dos = ["a) Python", "b) Java", "c) PHP", "d) Assembly"]
     for ii in range(0, 4):
         print(preg_dos[ii])
     respuesta_2 = input("\nTu respuesta: ")
@@ -79,9 +83,13 @@ while iniciar_trivia == True:  # Mientras iniciar_trivia sea True, repite:
     time.sleep(1)
 
     # Pregunta 3
-    print("\n1) ¿Qué hace el intérprete?")
-    preg_tres = ["a) Encuentra el error.", "b) Encuentra el error y termina su trabajo.",
-                 "c) Lee el código fuente de abajo hacia arriba.", "d) Lee el código fuente de arriba hacia abajo."]
+    print("\n3) ¿Qué hace el intérprete?")
+    preg_tres = [
+        "a) Encuentra el error.",
+        "b) Encuentra el error y termina su trabajo.",
+        "c) Lee el código fuente de abajo hacia arriba.",
+        "d) Lee el código fuente de arriba hacia abajo."
+    ]
     for iii in range(0, 4):
         print(preg_tres[iii])
 
@@ -113,7 +121,8 @@ while iniciar_trivia == True:  # Mientras iniciar_trivia sea True, repite:
 
     print("\n¿Deseas intentar la trivia nuevamente?")
     repetir_trivia = input(
-        "Ingresa 'si' para repetir, o cualquier tecla para finalizar: ").lower()
+        "Ingresa 'si' para repetir, o cualquier tecla para finalizar: ").lower(
+        )
 
     if repetir_trivia != "si":  # != significa "distinto"
         print("\nEspero {nombre} que lo hayas pasado bien, hasta pronto!")
